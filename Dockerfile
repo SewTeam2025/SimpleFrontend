@@ -2,7 +2,7 @@ FROM node:lts-alpine AS build
 
 WORKDIR /app
 
-COPY ./frontend .
+COPY . .
 RUN npm install vue && npm run build
 
 FROM nginx:stable-alpine AS production
